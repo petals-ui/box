@@ -1,16 +1,23 @@
-@import "~@petals/basic/helper";
-
 @import "./properties";
 
-$buds--box-bg-color: $__buds--white !default;
-$buds--box-border-radius: rem(3px) !default;
-$buds--box-box-shadow: rem(0 1px 4px 0 rgba(0, 0, 0, 0.14)) !default;
+$buds--box-bg-color: var($__buds--box-bg-color, $__buds--white) !default;
+$buds--box-border-radius: var($__buds--box-border-radius, rem(3px)) !default;
+$buds--box-box-shadow: var(
+  $__buds--box-box-shadow,
+  rem(0 1px 4px 0 rgba(0, 0, 0, 0.14))
+) !default;
 
-$buds--box-padding: rem(15px) !default;
-$buds--box-vertical-padding: $buds--box-padding !default;
-$buds--box-horizontal-padding: $buds--box-padding !default;
+$buds--box-padding: var($__buds--box-padding, rem(15px)) !default;
+$buds--box-vertical-padding: var(
+  $__buds--box-vertical-padding,
+  $buds--box-padding
+) !default;
+$buds--box-horizontal-padding: var(
+  $__buds--box-horizontal-padding,
+  $buds--box-padding
+) !default;
 
-$buds--box-siblings-space: rem(20px) !default;
+$buds--box-siblings-space: var($__buds--box-siblings-space, rem(20px)) !default;
 
-$buds--box-header-height: rem(54px) !default;
-$buds--box-footer-height: auto !default;
+$buds--box-header-height: var($__buds--box-header-height, rem(54px)) !default;
+$buds--box-footer-height: var($__buds--box-footer-height, auto) !default;
