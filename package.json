@@ -1,10 +1,11 @@
 {
   "name": "@petals/box",
   "version": "0.0.0",
-  "description": "",
+  "description": "Box component",
   "main": "style.scss",
   "sass": "style.scss",
   "scripts": {
+    "demo": "gulp demo",
     "prebuild": "rm -rf dist",
     "build": "gulp",
     "precopy": "rm -rf dist/package*.json dist/*.md",

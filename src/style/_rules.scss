@@ -1,35 +1,11 @@
 .Box {
   display: block;
-  background-color: $buds--box-bg-color;
-
-  @if $buds--box-box-shadow != none {
-    @include box-shadow($buds--box-box-shadow);
-  }
-
-  @if whether-non-zero($buds--box-border-radius) {
-    @include border-radius($buds--box-border-radius);
-  }
-
-  @if whether-non-zero($buds--box-vertical-padding) or
-    whether-non-zero($buds--box-horizontal-padding)
-  {
-    .Box-body,
-    .Box-footer {
-      padding: $buds--box-vertical-padding $buds--box-horizontal-padding;
-    }
-  }
-
-  @if whether-non-zero($buds--box-siblings-space) {
-    + .Box {
-      margin-top: $buds--box-siblings-space;
-    }
-  }
 }
 
 // Box with fixed body height
 
 .Box--fixedHeight {
-  @include fixed-body-height(
+  @include fixed-body-height-with-var(
     ".Box-header",
     $buds--box-header-height,
     ".Box-footer",

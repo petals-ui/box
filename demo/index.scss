@@ -1,0 +1,54 @@
+@import "~@petals/basic/base";
+
+@import "../dist/style/variables";
+@import "../dist/style/mixins";
+@import "../dist/style/rules";
+
+body {
+  background-color: #fefefe;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 10px;
+
+  + div {
+    padding: 10px;
+    border-top: 1px solid #a6a6a6;
+    border-radius: 0 0 6px 6px;
+    background-color: #fff;
+  }
+}
+
+main {
+  padding: 15px;
+}
+
+section {
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  background-color: #eee;
+
+  + section {
+    margin-top: 15px;
+  }
+}
+
+.Box {
+  background-color: antiquewhite;
+
+  &-header {
+    background-color: pink;
+  }
+
+  &-body {
+    background-color: yellow;
+  }
+
+  &-footer {
+    background-color: aquamarine;
+  }
+}
